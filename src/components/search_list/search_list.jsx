@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import styles from './search_list.module.css';
+import logo from './images/logo.png';
+import search from './images/search.png';
 
 const SearchList = ({ onSearch }) => {
   const inputRef = useRef();
@@ -21,7 +23,7 @@ const SearchList = ({ onSearch }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img className={styles.img} src="./images/logo.png" alt="logo" />
+        <img className={styles.img} src={logo} alt="logo" />
         <h1 className={styles.title}>Youtube</h1>
       </div>
       <input
@@ -32,11 +34,7 @@ const SearchList = ({ onSearch }) => {
         onKeyPress={onKeyPress}
       />
       <button className={styles.button} type="submit" onClick={onClick}>
-        <img
-          className={styles.buttonImg}
-          src="./images/search.png"
-          alt="search"
-        />
+        <img className={styles.buttonImg} src={search} alt="search" />
       </button>
     </header>
   );
